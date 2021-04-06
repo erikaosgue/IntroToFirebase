@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IntroToKotlinFirebase</string>
+    <string name="congrats_text">congrats</string>
+    <string name="sign_out_button">singOutButton</string>
+</resources>

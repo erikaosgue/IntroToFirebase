@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+    android:padding="20dp"
+  tools:context=".IntroFirebase.MainActivity">
+
+  <Button
+      android:id="@+id/buttonId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:text="Button"
+
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/cardViewId"
+      app:layout_constraintVertical_bias="0.68" />
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardViewId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="20dp"
+      android:backgroundTint="@color/design_default_color_secondary_variant"
+
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+    <TextView
+        android:id="@+id/objectTittleId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="FullObject:"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/objectId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Object"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/objectTittleId" />
+
+    <TextView
+        android:id="@+id/nameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/objectId" />
+      <TextView
+          android:id="@+id/positionId"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="name"
+          android:layout_margin="5dp"
+          android:textStyle="bold"
+
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/nameId" />
+      <TextView
+          android:id="@+id/addressId"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="name"
+          android:layout_margin="5dp"
+          android:textStyle="bold"
+
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/positionId" />
+      <TextView
+          android:id="@+id/ageId"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="name"
+          android:layout_margin="5dp"
+          android:textStyle="bold"
+
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/addressId" />
+
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
