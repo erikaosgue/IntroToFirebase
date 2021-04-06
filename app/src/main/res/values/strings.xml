@@ -1,4 +1,5 @@
 <resources>
+    <!--    <string name="default_web_client_id">392136165410-o80f5tg3riohg76ldlmf4dfuvspvbf0j.apps.googleusercontent.com</string>-->
     <string name="app_name">IntroToKotlinFirebase</string>
     <string name="congrats_text">congrats</string>
     <string name="sign_out_button">singOutButton</string>

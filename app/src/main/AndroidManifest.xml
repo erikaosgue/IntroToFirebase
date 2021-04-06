@@ -11,10 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntroToKotlinFirebase">
-        <activity android:name="com.erikaosgue.introtokotlinfirebase.SignInAndSignOut.HomeActivity"></activity>
-        <!-- <activity android:name=".MainActivity"> -->
-        <!-- Comment the next line and uncomment the 2 lines above to launch main activity -->
-        <activity android:name="com.erikaosgue.introtokotlinfirebase.SignInAndSignOut.SignInActivity">
+<!--        <activity android:name=".ExampleSingIn.MainSignInActivity">-->
+
+<!--        <activity android:name=".IntroFirebase.MainActivity">-->
+
+        <activity android:name=".SignInAndSignOut.HomeActivity" />
+        <activity android:name=".SignInAndSignOut.SignInActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

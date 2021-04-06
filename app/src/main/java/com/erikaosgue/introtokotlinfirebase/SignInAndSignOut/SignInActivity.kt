@@ -37,6 +37,8 @@ class SignInActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
     }
+
+    // Retur
     companion object {
         fun getLaunchIntent(from: Context) = Intent(from, SignInActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
@@ -52,7 +54,7 @@ class SignInActivity : AppCompatActivity() {
             finish()
         }
         else {
-            Toast.makeText(this, "User CAN'T sing-in", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "user is not sing-in", Toast.LENGTH_LONG).show()
 
         }
     }
@@ -61,7 +63,7 @@ class SignInActivity : AppCompatActivity() {
     //get the shareInstance of FirebaseAuth
     private fun configureGoogleSignIn() {
         mGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString( .default_web_client_id))
+            .requestIdToken(getString(R.string .default_web_client_id))
             .requestEmail()
             .build()
         mGoogleSignInClient = GoogleSignIn.getClient(this, mGoogleSignInOptions)
