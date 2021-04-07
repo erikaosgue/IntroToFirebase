@@ -15,8 +15,8 @@
 
 <!--        <activity android:name=".IntroFirebase.MainActivity">-->
 
-        <activity android:name=".SignInAndSignOut.HomeActivity" />
-        <activity android:name=".SignInAndSignOut.SignInActivity">
+        <activity android:name=".SignInAndSignOutWithGoogle.HomeActivity" />
+        <activity android:name=".SignInAndSignOutWithGoogle.SignInActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

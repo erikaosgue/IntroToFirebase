@@ -1,4 +1,4 @@
-package com.erikaosgue.introtokotlinfirebase.ExampleSingIn
+package com.erikaosgue.introtokotlinfirebase.ExampleSingInWithEmail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

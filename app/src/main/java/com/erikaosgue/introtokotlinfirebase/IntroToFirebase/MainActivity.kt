@@ -1,4 +1,4 @@
-package com.erikaosgue.introtokotlinfirebase.IntroFirebase
+package com.erikaosgue.introtokotlinfirebase.IntroToFirebase
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,11 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+
+//Each activity contains a different exercise
+//In order to run each onw just uncomment in the manifest
+//the activity you want to run
+
 
 class MainActivity : AppCompatActivity() {
 
