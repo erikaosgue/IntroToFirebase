@@ -11,19 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntroToKotlinFirebase">
-<!--        <activity android:name=".ExampleSingIn.MainSignInActivity">-->
 
-<!--        <activity android:name=".IntroFirebase.MainActivity">-->
 
-        <activity android:name=".SignInAndSignOutWithGoogle.HomeActivity" />
-        <activity android:name=".SignInAndSignOutWithGoogle.SignInActivity">
+<!--        // Just Simple Example of Using firebaseDatabase-->
+<!--        <activity android:name=".IntroToFirebase.MainActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
 
+
+<!--            //Example Dichone to Authenticate with email-->
+        <activity android:name=".ExampleSingInWithEmail.MainSignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+<!--        // GOOGLE Authentication-->
+<!--        <activity android:name=".SignInAndSignOutWithGoogle.HomeActivity" />-->
+<!--        <activity android:name=".SignInAndSignOutWithGoogle.SignInActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
     </application>
 
 </manifest>

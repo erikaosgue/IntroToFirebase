@@ -25,38 +25,55 @@ class MainSignInActivity : AppCompatActivity() {
         actMainSingInBinding = ActivityMainSignInBinding.inflate(layoutInflater)
         setContentView(actMainSingInBinding.root)
 
-//        var firebaseDatabase = FirebaseDatabase.getInstance()
 
         mAuth = FirebaseAuth.getInstance()
+
+        setupUI()
+        sigInUser()
+
+    }
+
+    private fun setupUI() {
 
         actMainSingInBinding.buttonCreateAccount.setOnClickListener {
             //Create a new user
             val email = actMainSingInBinding.email.text.toString().trim()
-            val passw = actMainSingInBinding.passwordId.text.toString().trim()
-            mAuth?.createUserWithEmailAndPassword(email, passw)
-                ?.addOnCompleteListener(this)
-                { task: Task<AuthResult> ->
-                    if (task.isSuccessful) {
-                        var user: FirebaseUser = mAuth!!.currentUser
-                        Log.d("User: ", user.email.toString())
-                    } else {
-                        Log.d("Error: ", task.exception.toString())
-                    }
-                }
-        }
+            val password = actMainSingInBinding.passwordId.text.toString().trim()
 
+            createNewUser(email, password)
+
+
+        }
+    }
+    private  fun createNewUser(email: String, password: String) {
+
+        mAuth?.createUserWithEmailAndPassword(email, password)
+            ?.addOnCompleteListener(this)
+            { task: Task<AuthResult> ->
+                if (task.isSuccessful) {
+                    var user: FirebaseUser = mAuth!!.currentUser
+                    Log.d("User: ", user.email.toString())
+                    Toast.makeText(this, "Success account Created! ${user.email}", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Fail to create account: ${task.exception}", Toast.LENGTH_LONG).show()
+                    Log.d("Error: ", task.exception.toString())
+                }
+            }
+    }
+
+    private fun sigInUser(){
         //Sing in Existing User
         val user = "userexample@example.com"
         val pass = "example"
         mAuth?.signInWithEmailAndPassword(user, pass)?.addOnCompleteListener {
                 task: Task<AuthResult> ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Sign in Successful", Toast.LENGTH_LONG).show()
+            if (task.isSuccessful) {
+                Toast.makeText(this, "Sign in Successful", Toast.LENGTH_LONG).show()
 
-                    } else {
-                        Toast.makeText(this, "Can't Sign in", Toast.LENGTH_LONG).show()
-                    }
+            } else {
+                Toast.makeText(this, "Can't Sign in", Toast.LENGTH_LONG).show()
             }
+        }
     }
 
     override fun onStart() {
